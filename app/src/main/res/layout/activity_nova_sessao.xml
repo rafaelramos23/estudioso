@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCEEEE"
+    android:orientation="vertical"
+    tools:context=".NovaSessaoActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/txtNovaSessao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="center"
+        android:autoText="true"
+        android:background="#E4E5EE"
+        android:gravity="center"
+        android:text="Nova Sessão de Estudo"
+        android:textColor="#39393C"
+        android:textSize="18sp"
+        app:fontFamily="sans-serif-smallcaps" />
+
+    <LinearLayout
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=""
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtManual"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Manual" />
+
+        <Switch
+            android:id="@+id/switchTipoSessao"
+            android:layout_width="6dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/txtCronometro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="       Cronometro" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Matéria" />
+
+    <Spinner
+        android:id="@+id/spnMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtTema"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tema" />
+
+    <Spinner
+        android:id="@+id/spnTema"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtTopico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tópico" />
+
+    <Spinner
+        android:id="@+id/spnTopico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data" />
+
+    <Spinner
+        android:id="@+id/spnData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtDuracao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Duração" />
+
+    <Spinner
+        android:id="@+id/spnDuracao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Switch
+        android:id="@+id/switchRevisao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agendar revisão" />
+
+    <Switch
+        android:id="@+id/switch5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar questões" />
+
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:text="Salvar" />
+
+</LinearLayout>
