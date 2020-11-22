@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,21 +10,11 @@
     tools:context=".NovaSessaoActivity">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:orientation="vertical"></LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" />
-
     <TextView
         android:id="@+id/txtNovaSessao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="center"
+        android:layout_marginTop="10dp"
         android:autoText="true"
         android:background="#E4E5EE"
         android:gravity="center"
@@ -33,103 +24,175 @@
         app:fontFamily="sans-serif-smallcaps" />
 
     <LinearLayout
-        android:layout_width="296dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight=""
+        android:layout_gravity="center"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/txtManual"
-            android:layout_width="0dp"
+            android:layout_width="100dp"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Manual" />
 
         <Switch
             android:id="@+id/switchTipoSessao"
-            android:layout_width="6dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_weight="1" />
 
         <TextView
             android:id="@+id/txtCronometro"
             android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="       Cronometro" />
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <TextView
         android:id="@+id/txtMateria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Matéria" />
 
-    <Spinner
+    <com.beardedhen.androidbootstrap.BootstrapDropDown
         android:id="@+id/spnMateria"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        app:bootstrapText="Selecionar matéria"
+        app:bootstrapBrand="secondary"
+        app:roundedCorners="true"
+        app:bootstrapSize="sm"
+        app:dropdownResource="@array/listaMateria"
+        app:bootstrapExpandDirection="down"/>
 
     <TextView
         android:id="@+id/txtTema"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Tema" />
 
-    <Spinner
+    <com.beardedhen.androidbootstrap.BootstrapDropDown
         android:id="@+id/spnTema"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        app:bootstrapText="Selecionar tema"
+        app:bootstrapBrand="secondary"
+        app:roundedCorners="true"
+        app:bootstrapSize="sm"
+        app:dropdownResource="@array/listaTema"
+        app:bootstrapExpandDirection="down"/>
 
     <TextView
         android:id="@+id/txtTopico"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Tópico" />
 
-    <Spinner
+    <com.beardedhen.androidbootstrap.BootstrapDropDown
         android:id="@+id/spnTopico"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        app:bootstrapText="Selecionar tópico"
+        app:bootstrapBrand="secondary"
+        app:roundedCorners="true"
+        app:bootstrapSize="sm"
+        app:dropdownResource="@array/listaTopico"
+        app:bootstrapExpandDirection="down"/>
 
     <TextView
         android:id="@+id/txtData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Data" />
 
-    <Spinner
-        android:id="@+id/spnData"
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/edtData"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="date"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="info"
+        android:hint="Digite a data"
+        app:roundedCorners="true"
+        />
 
     <TextView
         android:id="@+id/txtDuracao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Duração" />
 
-    <Spinner
-        android:id="@+id/spnDuracao"
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/edtHoraEstudada"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="datetime"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="info"
+        android:hint="Digite o Tempo de estudo"
+        app:roundedCorners="true"
+        />
+
 
     <Switch
         android:id="@+id/switchRevisao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Agendar revisão" />
 
     <Switch
-        android:id="@+id/switch5"
+        android:id="@+id/switchQuestoes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Registrar questões" />
 
-    <Button
-        android:id="@+id/btnSalvar"
-        android:layout_width="184dp"
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/btnSalvarSessao"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Salvar" />
+        android:text="Salvar sessão"
+        android:layout_marginTop="10dp"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:showOutline="true"
+        app:roundedCorners="true"
+        />
+
+        <TextView
+            android:id="@+id/txtespaço"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="" />
+    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,10 +10,9 @@
     tools:context=".CronogramaActivity">
 
     <TextView
-        android:id="@+id/txtCadCronograma2"
+        android:id="@+id/txtCadCronograma"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="center"
         android:autoText="true"
         android:background="#E4E5EE"
         android:gravity="center"
@@ -21,48 +21,74 @@
         android:textSize="18sp"
         app:fontFamily="sans-serif-smallcaps" />
 
-    <Spinner
+    <com.beardedhen.androidbootstrap.BootstrapDropDown
         android:id="@+id/spnDiaSemana"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="center" />
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        app:bootstrapText="Selecionar dia da semana"
+        app:bootstrapBrand="secondary"
+        app:roundedCorners="true"
+        app:bootstrapSize="sm"
+        app:dropdownResource="@array/listaSemana"
+        app:bootstrapExpandDirection="down"/>
 
-    <Spinner
-        android:id="@+id/spnMateria"
+    <com.beardedhen.androidbootstrap.BootstrapDropDown
+        android:id="@+id/spnMateriaCro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="center" />
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        app:bootstrapText="Selecionar matéria"
+        app:bootstrapBrand="secondary"
+        app:roundedCorners="true"
+        app:bootstrapSize="sm"
+        app:dropdownResource="@array/listaMateria"
+        app:bootstrapExpandDirection="down"/>
 
-    <EditText
-        android:id="@+id/edtHoraInicial"
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/edtHoraInicialCro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="center"
-        android:hint="previsão de horário inicial"
-        android:ems="10"
-        android:inputType="date" />
+        android:layout_marginTop="10dp"
+        android:inputType="datetime"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="info"
+        android:hint="Previsão de horário inicial"
+        app:roundedCorners="true"
+        />
 
-    <EditText
-        android:id="@+id/edtHoraFinal"
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/edtHoraFinalCro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="center"
-        android:hint="previsão de horário final"
-        android:ems="10"
-        android:inputType="date" />
+        android:layout_marginTop="10dp"
+        android:inputType="datetime"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="info"
+        android:hint="Previsão de horário final"
+        app:roundedCorners="true"
+        />
 
-    <Button
-        android:id="@+id/btnAdicionar"
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/btnAddMatCronograma"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="center"
-        android:text="Adicionar" />
+        android:text="Adicionar matéria"
+        android:layout_marginTop="10dp"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:showOutline="true"
+        app:roundedCorners="true"
+        />
 
     <TextView
         android:id="@+id/txtConsultaDia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="center"
+        android:layout_marginTop="10dp"
         android:autoText="true"
         android:background="#E4E5EE"
         android:gravity="center"
@@ -74,7 +100,6 @@
     <ListView
         android:id="@+id/lstRegistrosDia"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="center" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>

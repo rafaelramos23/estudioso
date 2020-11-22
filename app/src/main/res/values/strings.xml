@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">EstudiosoAPP</string>
+    <string-array name="listaMateria">
+        <item>Engenharia de Software II</item>
+        <item>Laboratório de Engenharia de Software</item>
+        <item>Banco de dados</item>
+
+
+    </string-array>
+
+    <string-array name="listaTopico">
+        <item>Topico 1</item>
+    </string-array>
+
+    <string-array name="listaTema">
+        <item>Tema 1</item>
+    </string-array>
+
+    <string-array name="listaSemana">
+        <item>Segunda-feira</item>
+        <item>Terça-feira</item>
+        <item>Quarta-feira</item>
+        <item>Quinta-feira</item>
+        <item>Sexta-feira</item>
+        <item>Sábado</item>
+        <item>Domingo</item>
+    </string-array>
+
 </resources>

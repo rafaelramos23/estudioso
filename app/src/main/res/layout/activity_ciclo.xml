@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +13,7 @@
         android:id="@+id/txtCadCiclo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="center"
+        android:layout_marginTop="10dp"
         android:autoText="true"
         android:background="#E4E5EE"
         android:gravity="center"
@@ -21,43 +22,61 @@
         android:textSize="18sp"
         app:fontFamily="sans-serif-smallcaps" />
 
-    <Spinner
-        android:id="@+id/spnMateriaCiclo"
+    <com.beardedhen.androidbootstrap.BootstrapDropDown
+        android:id="@+id/spnDiaSemana"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="center" />
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        app:bootstrapText="Selecione a Matéria"
+        app:bootstrapBrand="secondary"
+        app:roundedCorners="true"
+        app:bootstrapSize="sm"
+        app:dropdownResource="@array/listaMateria"
+        app:bootstrapExpandDirection="down"/>
 
-    <EditText
+    <com.beardedhen.androidbootstrap.BootstrapEditText
         android:id="@+id/edtHoraInicial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="center"
-        android:ems="10"
-        android:hint="previsão de horário inicial"
-        android:inputType="date" />
+        android:layout_marginTop="10dp"
+        android:inputType="date"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="info"
+        android:hint="Previsão de horário inicial"
+        app:roundedCorners="true"
+        />
 
-
-    <EditText
+    <com.beardedhen.androidbootstrap.BootstrapEditText
         android:id="@+id/edtHoraFinal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="center"
-        android:ems="10"
-        android:hint="previsão de horário final"
-        android:inputType="date" />
+        android:layout_marginTop="10dp"
+        android:inputType="date"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="info"
+        android:hint="Previsão de horário final"
+        app:roundedCorners="true"
+        />
 
-
-    <Button
-        android:id="@+id/btnAdicionar2"
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/btnAddMatCiclo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="center"
-        android:text="Adicionar" />
+        android:text="Adicionar matéria"
+        android:layout_marginTop="10dp"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:showOutline="true"
+        app:roundedCorners="true"
+        />
+
 
     <ListView
         android:id="@+id/lstRegistrosDia"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="center" />
+         />
 
 </LinearLayout>
