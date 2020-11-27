@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_estudioso_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NovaSessaoActivity"></activity>
+        <activity android:name=".ConsRevisoesActivity"></activity>
+        <activity android:name=".ConsQuestoesActivity" />
+        <activity android:name=".ConsCronogramaActivity" />
+        <activity android:name=".ConsCicloActivity" />
+        <activity android:name=".RevisoesActivity" />
+        <activity android:name=".QuestoesActivity" />
+        <activity android:name=".NovaSessaoActivity" />
         <activity android:name=".CicloActivity" />
         <activity android:name=".CronogramaActivity" />
         <activity android:name=".MainActivity">

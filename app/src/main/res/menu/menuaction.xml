@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/inicio"
+        android:title="Home"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_lock_idle_charging"/>
+
+    <item android:id="@+id/ciclo"
+        android:title="Ciclo"
+        android:icon="@android:drawable/ic_delete"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/cronogrma"
+        android:title="Cronograma"
+        android:icon="@android:drawable/ic_delete"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/sessao"
+        android:title="Sessão de Estudo"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_lock_idle_charging"/>
+
+    <item android:id="@+id/questoes"
+        android:title="Questões"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_lock_idle_charging"/>
+
+    <item android:id="@+id/revisao"
+        android:title="Revisões"
+        android:icon="@android:drawable/ic_delete"
+        app:showAsAction="never"/>
+
+
+</menu>

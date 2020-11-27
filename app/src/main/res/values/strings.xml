@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">EstudiosoAPP</string>
+    <string name="Open">EstudiosoAPP</string>
+    <string name="Close">EstudiosoAPP</string>
+
     <string-array name="listaMateria">
         <item>Engenharia de Software II</item>
         <item>Laboratório de Engenharia de Software</item>

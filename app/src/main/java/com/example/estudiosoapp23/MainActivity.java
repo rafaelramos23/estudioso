@@ -1,9 +1,10 @@
 package com.example.estudiosoapp23;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.beardedhen.androidbootstrap.BootstrapButton;
 
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         btCiclo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_ciclo);
+                abreTelaCiclo();
             }
         });
 
@@ -47,5 +48,11 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_nova_sessao);
             }
         });
+    }
+
+    private void abreTelaCiclo(){
+        Intent intent = new Intent(this, CicloActivity.class);
+        //intent.putExtra("varTeste", teste);
+        startActivity(intent);
     }
 }
