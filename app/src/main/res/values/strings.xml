@@ -12,11 +12,11 @@
     </string-array>
 
     <string-array name="listaTopico">
-        <item>Topico 1</item>
+        <item>Sem Topicos cadastrados</item>
     </string-array>
 
     <string-array name="listaTema">
-        <item>Tema 1</item>
+        <item>Sem Temas cadastrados</item>
     </string-array>
 
     <string-array name="listaSemana">

@@ -31,24 +31,27 @@
         app:fontFamily="sans-serif-smallcaps" />
 
     <com.beardedhen.androidbootstrap.BootstrapDropDown
-        android:id="@+id/spnDiaSemana"
+        android:id="@+id/spnMateriaCiclo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         app:bootstrapText="Selecione a Matéria"
-        app:bootstrapBrand="secondary"
+        app:bootstrapBrand="info"
         app:roundedCorners="true"
-        app:bootstrapSize="sm"
+        app:bootstrapSize="lg"
         app:dropdownResource="@array/listaMateria"
         app:bootstrapExpandDirection="down"/>
 
     <com.beardedhen.androidbootstrap.BootstrapEditText
-        android:id="@+id/edtHoraInicial"
+        android:id="@+id/edtHoraInicialCiclo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:inputType="date"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:inputType="time"
         app:bootstrapSize="xl"
         app:bootstrapBrand="info"
         android:hint="Previsão de horário inicial"
@@ -56,11 +59,13 @@
         />
 
     <com.beardedhen.androidbootstrap.BootstrapEditText
-        android:id="@+id/edtHoraFinal"
+        android:id="@+id/edtHoraFinalCiclo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:inputType="date"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:inputType="time"
         app:bootstrapSize="xl"
         app:bootstrapBrand="info"
         android:hint="Previsão de horário final"
@@ -73,19 +78,19 @@
         android:layout_height="wrap_content"
         android:text="Adicionar matéria"
         android:layout_marginTop="10dp"
-        app:bootstrapBrand="primary"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:bootstrapBrand="info"
         app:bootstrapSize="lg"
         app:buttonMode="regular"
         app:showOutline="true"
-        app:roundedCorners="true"
-        />
+        app:roundedCorners="true" />
 
 
-    <ListView
-        android:id="@+id/lstRegistrosDia"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+        <ListView
+            android:id="@+id/lstRegistrosDia"
+            android:layout_width="276dp"
+            android:layout_height="match_parent"></ListView>
     </LinearLayout>
 
     <include

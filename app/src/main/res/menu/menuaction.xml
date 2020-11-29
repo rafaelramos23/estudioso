@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
 
 
     <item android:id="@+id/inicio"
         android:title="Home"
         app:showAsAction="always"
-        android:icon="@android:drawable/ic_lock_idle_charging"/>
+        android:icon="@drawable/ic_home_black_24dp" />
 
     <item android:id="@+id/ciclo"
-        android:title="Ciclo"
-        android:icon="@android:drawable/ic_delete"
+        android:title="Ciclo de Estudo"
+        android:icon="@drawable/ic_ciclo_black_24dp"
         app:showAsAction="never"/>
 
-    <item android:id="@+id/cronogrma"
-        android:title="Cronograma"
-        android:icon="@android:drawable/ic_delete"
+    <item android:id="@+id/cronograma"
+        android:title="Cronograma de Estudo"
+        android:icon="@drawable/ic_cronograma_black_24dp"
         app:showAsAction="never"/>
+
+    <item android:id="@+id/materia"
+        android:title="Materia"
+        android:icon="@drawable/ic_library_books_black_24dp"
+        app:showAsAction="never"/>
+
 
     <item android:id="@+id/sessao"
         android:title="Sessão de Estudo"
         app:showAsAction="always"
-        android:icon="@android:drawable/ic_lock_idle_charging"/>
+        android:icon="@drawable/ic_sessao_black_24dp" />
 
     <item android:id="@+id/questoes"
         android:title="Questões"
         app:showAsAction="always"
-        android:icon="@android:drawable/ic_lock_idle_charging"/>
+        android:icon="@drawable/ic_questoes_black_24dp"/>
 
     <item android:id="@+id/revisao"
         android:title="Revisões"
-        android:icon="@android:drawable/ic_delete"
+        android:icon="@drawable/ic_revisao_eye_black_24dp"
         app:showAsAction="never"/>
+
+    <item android:id="@+id/config"
+        android:title="Configurações"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_build_black_24dp"/>
 
 
 </menu>

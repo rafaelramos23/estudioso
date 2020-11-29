@@ -1,9 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".RevisoesActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtCadCiclo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autoText="true"
+        android:background="#E4E5EE"
+        android:gravity="center"
+        android:text="Ciclo de Estudo"
+        android:textColor="#39393C"
+        android:textSize="18sp"
+        app:fontFamily="sans-serif-smallcaps" />
+
+
+    <com.beardedhen.androidbootstrap.BootstrapDropDown
+        android:id="@+id/spnRevisaoMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:bootstrapText="Selecione a Matéria"
+        app:bootstrapBrand="success"
+        app:roundedCorners="true"
+        app:bootstrapSize="lg"
+        app:dropdownResource="@array/listaMateria"
+        app:bootstrapExpandDirection="down"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/edtDataRevisao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:inputType="date"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="success"
+        android:hint="Data"
+        app:roundedCorners="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <CheckBox
+            android:id="@+id/checb1Dia"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:text="1 Dia"
+            android:textSize="20dp" />
+
+        <CheckBox
+            android:id="@+id/checb7Dias"
+            android:layout_width="224dp"
+            android:layout_height="wrap_content"
+            android:text="7 Dias"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <CheckBox
+            android:id="@+id/checb15Dias"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:text="15 dias"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/checb30Dias"
+            android:layout_width="223dp"
+            android:layout_height="wrap_content"
+            android:text="30 Dias"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <CheckBox
+            android:id="@+id/checb60Dia"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:text="60 Dias"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/checb90Dia"
+            android:layout_width="226dp"
+            android:layout_height="wrap_content"
+            android:text="90 Dias"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/edtObservacoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:inputType="text"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="success"
+        android:hint="Descrição"
+        app:roundedCorners="true" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/btnAddRevisao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agendar Revisões"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:bootstrapBrand="success"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:showOutline="true"
+        app:roundedCorners="true" />
+
+</LinearLayout>

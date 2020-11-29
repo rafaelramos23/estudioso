@@ -2,13 +2,30 @@ package com.example.estudiosoapp23;
 
 import android.os.Bundle;
 
+import com.beardedhen.androidbootstrap.BootstrapButton;
+import com.beardedhen.androidbootstrap.BootstrapDropDown;
+import com.beardedhen.androidbootstrap.BootstrapEditText;
+
 public class CicloActivity extends TesteNavigationH {
+
+    private BootstrapDropDown spnMateriaCiclo;
+    private BootstrapEditText edPrevInicioCiclo, edPrevFinalCiclo;
+    private BootstrapButton btAddMateriaCiclo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ciclo);
         navigationDrawer();
+    }
+
+    private void carregaWidgetsCadCiclo(){
+        edPrevFinalCiclo = (BootstrapEditText)findViewById(R.id.edtHoraFinalCiclo);
+        edPrevInicioCiclo = (BootstrapEditText)findViewById(R.id.edtHoraInicialCro);
+
+        btAddMateriaCiclo = (BootstrapButton)findViewById(R.id.btnAddMatCiclo);
+
+        spnMateriaCiclo = (BootstrapDropDown)findViewById(R.id.spnMateriaCiclo);
     }
 /*
     @Override

@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DCEEEE"
     android:orientation="vertical"
     tools:context=".CronogramaActivity">
 
@@ -27,10 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         app:bootstrapText="Selecionar dia da semana"
-        app:bootstrapBrand="secondary"
+        app:bootstrapBrand="success"
         app:roundedCorners="true"
-        app:bootstrapSize="sm"
+        app:bootstrapSize="lg"
         app:dropdownResource="@array/listaSemana"
         app:bootstrapExpandDirection="down"/>
 
@@ -40,10 +40,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         app:bootstrapText="Selecionar matéria"
-        app:bootstrapBrand="secondary"
+        app:bootstrapBrand="success"
         app:roundedCorners="true"
-        app:bootstrapSize="sm"
+        app:bootstrapSize="lg"
         app:dropdownResource="@array/listaMateria"
         app:bootstrapExpandDirection="down"/>
 
@@ -52,9 +53,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:inputType="datetime"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:inputType="time"
         app:bootstrapSize="xl"
-        app:bootstrapBrand="info"
+        app:bootstrapBrand="success"
         android:hint="Previsão de horário inicial"
         app:roundedCorners="true"
         />
@@ -64,9 +67,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:inputType="datetime"
         app:bootstrapSize="xl"
-        app:bootstrapBrand="info"
+        app:bootstrapBrand="success"
         android:hint="Previsão de horário final"
         app:roundedCorners="true"
         />
@@ -77,7 +82,9 @@
         android:layout_height="wrap_content"
         android:text="Adicionar matéria"
         android:layout_marginTop="10dp"
-        app:bootstrapBrand="primary"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:bootstrapBrand="success"
         app:bootstrapSize="lg"
         app:buttonMode="regular"
         app:showOutline="true"

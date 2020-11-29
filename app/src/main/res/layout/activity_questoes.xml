@@ -1,9 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".QuestoesActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtCadQuestoes"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autoText="true"
+        android:background="#E4E5EE"
+        android:gravity="center"
+        android:text="Questões Resolvidas"
+        android:textColor="#39393C"
+        android:textSize="18sp"
+        app:fontFamily="sans-serif-smallcaps" />
+
+
+    <com.beardedhen.androidbootstrap.BootstrapDropDown
+        android:id="@+id/spnQuestoesMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:bootstrapText="Selecione a Matéria"
+        app:bootstrapBrand="danger"
+        app:roundedCorners="true"
+        app:bootstrapSize="lg"
+        app:dropdownResource="@array/listaMateria"
+        app:bootstrapExpandDirection="down"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/edtQtdeResolvidas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:inputType="number"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="danger"
+        android:hint="Total de Questões Revolvidas"
+        app:roundedCorners="true" />
+
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/edtQtdeAcertos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:inputType="number"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="danger"
+        android:hint="Quantidade de Respostas Corretas"
+        app:roundedCorners="true" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/btnAddRevisao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agendar Revisões"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:bootstrapBrand="danger"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:showOutline="true"
+        app:roundedCorners="true" />
+
+    <TextView
+        android:id="@+id/txtAproveitamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autoText="true"
+        android:background="#E4E5EE"
+        android:gravity="center"
+        android:text="Questões Resolvidas"
+        android:textColor="#39393C"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:fontFamily="sans-serif-black" />
+
+</LinearLayout>

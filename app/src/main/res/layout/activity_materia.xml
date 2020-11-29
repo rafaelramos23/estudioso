@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MateriaActivity">
+
+
+    <TextView
+        android:id="@+id/txtCadMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autoText="true"
+        android:background="#E4E5EE"
+        android:gravity="center"
+        android:text="Nova Matéria"
+        android:textColor="#39393C"
+        android:textSize="18sp"
+        app:fontFamily="sans-serif-smallcaps" />
+
+
+    <TextView
+        android:id="@+id/txtNovaMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="18dp"
+        android:text="Nova Matéria" />
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/edtDataRevisao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:inputType="date"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="success"
+        android:hint="Nome da Nova Matéria"
+        app:roundedCorners="true" />
+
+
+    <TextView
+        android:id="@+id/txtTema"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autoText="true"
+        android:text="Temas"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        app:fontFamily="sans-serif-black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/edtTemaMateria"
+            android:layout_width="224dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:hint="Digite o Tema"
+            android:inputType="text"
+            app:bootstrapBrand="success"
+            app:bootstrapSize="xl"
+            app:roundedCorners="true" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/btnAddTema"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:text="Add"
+            app:bootstrapBrand="success"
+            app:bootstrapSize="lg"
+            app:buttonMode="regular"
+            app:roundedCorners="true"
+            app:showOutline="true" />
+
+    </LinearLayout>
+
+    <com.beardedhen.androidbootstrap.BootstrapDropDown
+        android:id="@+id/spnTemaNovaMat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:bootstrapText="Selecionar tema"
+        app:bootstrapBrand="success"
+        app:roundedCorners="true"
+        app:bootstrapSize="lg"
+        app:dropdownResource="@array/listaTema"
+        app:bootstrapExpandDirection="down"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/edtTopicoMateria"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:hint="Digite o Tópico"
+            android:inputType="text"
+            app:bootstrapBrand="success"
+            app:bootstrapSize="xl"
+            app:roundedCorners="true" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/btnAddTopico"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:text="Add"
+            app:bootstrapBrand="success"
+            app:bootstrapSize="lg"
+            app:buttonMode="regular"
+            app:roundedCorners="true"
+            app:showOutline="true" />
+
+    </LinearLayout>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/btnSalvarMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:text="Salvar"
+        app:bootstrapBrand="success"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:roundedCorners="true"
+        app:showOutline="true" />
+
+</LinearLayout>

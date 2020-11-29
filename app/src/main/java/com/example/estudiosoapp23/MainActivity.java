@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         btCronograma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_cronograma);
+                abreTelaCronograma();
             }
         });
 
@@ -45,13 +45,24 @@ public class MainActivity extends AppCompatActivity {
         btLivre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_nova_sessao);
+                abreTelaSessao();
             }
         });
     }
 
     private void abreTelaCiclo(){
         Intent intent = new Intent(this, CicloActivity.class);
+        //intent.putExtra("varTeste", teste);
+        startActivity(intent);
+    }
+
+    private void abreTelaCronograma(){
+        Intent intent = new Intent(this, CronogramaActivity.class);
+        //intent.putExtra("varTeste", teste);
+        startActivity(intent);
+    }
+    private void abreTelaSessao(){
+        Intent intent = new Intent(this, NovaSessaoActivity.class);
         //intent.putExtra("varTeste", teste);
         startActivity(intent);
     }

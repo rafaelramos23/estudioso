@@ -1,5 +1,6 @@
 package com.example.estudiosoapp23;
 
+import android.content.Intent;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -15,11 +16,15 @@ class TesteNavigationH extends AppCompatActivity {
     public DrawerLayout d1;
     public ActionBarDrawerToggle t;
     private NavigationView nv;
+    String tela="";
 
 
     public void navigationDrawer() {
 
-        d1 = (DrawerLayout) findViewById(R.id.activity_ciclo);
+
+
+
+            d1 = (DrawerLayout) findViewById(R.id.activity_ciclo);
 
         t = new ActionBarDrawerToggle(this, d1, R.string.Open, R.string.Close);
 
@@ -28,6 +33,7 @@ class TesteNavigationH extends AppCompatActivity {
         t.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         setNv((NavigationView) findViewById(R.id.nav_view));
 
@@ -42,7 +48,26 @@ class TesteNavigationH extends AppCompatActivity {
                         break;
 
                     case R.id.ciclo:
-                        Toast.makeText(getApplicationContext(), "Adicionars", Toast.LENGTH_SHORT).show();
+                        abreTelaCiclo();
+                        break;
+
+                    case R.id.cronograma:
+                        abreTelaCronograma();
+                        break;
+
+                    case R.id.materia:
+                        abreTelaMateria();
+                        break;
+                    case R.id.sessao:
+                        abreTelaSessao();
+                        break;
+
+                    case R.id.questoes:
+                        abreTelaQuestoes();
+                        break;
+
+                    case R.id.revisao:
+                        abreTelaRevisao();
                         break;
 
                     default:
@@ -68,5 +93,37 @@ class TesteNavigationH extends AppCompatActivity {
 
     public void setNv(NavigationView nv) {
         this.nv = nv;
+    }
+
+    private void abreTelaRevisao(){
+        Intent intent = new Intent(this, RevisoesActivity.class);
+        startActivity(intent);
+    }
+
+    private void abreTelaQuestoes(){
+        Intent intent = new Intent(this, QuestoesActivity.class);
+        startActivity(intent);
+    }
+
+
+    private void abreTelaMateria(){
+        Intent intent = new Intent(this, MateriaActivity.class);
+        startActivity(intent);
+    }
+
+    private void abreTelaCiclo(){
+        Intent intent = new Intent(this, ConsCicloActivity.class);
+       // intent.putExtra("tela", "ConsCiclo");
+        startActivity(intent);
+    }
+
+    private void abreTelaCronograma(){
+        Intent intent = new Intent(this, ConsCronogramaActivity.class);
+        startActivity(intent);
+    }
+
+    private void abreTelaSessao(){
+        Intent intent = new Intent(this, NovaSessaoActivity.class);
+        startActivity(intent);
     }
 }
