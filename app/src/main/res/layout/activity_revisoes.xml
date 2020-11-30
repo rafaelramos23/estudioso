@@ -116,7 +116,7 @@
     </LinearLayout>
 
     <com.beardedhen.androidbootstrap.BootstrapEditText
-        android:id="@+id/edtObservacoes"
+        android:id="@+id/edtObservacoesRev"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

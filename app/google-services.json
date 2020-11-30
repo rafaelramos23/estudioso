@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "301615875216",
+    "firebase_url": "https://bdestudioso.firebaseio.com",
+    "project_id": "bdestudioso",
+    "storage_bucket": "bdestudioso.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301615875216:android:5b5857fa4d4fdc96f4c415",
+        "android_client_info": {
+          "package_name": "com.example.estudiosoapp23"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301615875216-agfs922n14npi8p9874rmk1ffihr8hed.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.estudiosoapp23",
+            "certificate_hash": "ac80558cad9f47de4ab98bf776e83068dbae3129"
+          }
+        },
+        {
+          "client_id": "301615875216-kuqq5f7d3p968qgd3hlm33l4enn4nk5o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX696c4xgExr2ZbfwdKzjqkk6OENYsXgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301615875216-kuqq5f7d3p968qgd3hlm33l4enn4nk5o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

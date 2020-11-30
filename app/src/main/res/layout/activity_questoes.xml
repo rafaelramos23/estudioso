@@ -31,7 +31,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         app:bootstrapText="Selecione a Matéria"
-        app:bootstrapBrand="danger"
+        app:bootstrapBrand="info"
         app:roundedCorners="true"
         app:bootstrapSize="lg"
         app:dropdownResource="@array/listaMateria"
@@ -46,7 +46,7 @@
         android:layout_marginRight="8dp"
         android:inputType="number"
         app:bootstrapSize="xl"
-        app:bootstrapBrand="danger"
+        app:bootstrapBrand="info"
         android:hint="Total de Questões Revolvidas"
         app:roundedCorners="true" />
 
@@ -60,19 +60,19 @@
         android:layout_marginRight="8dp"
         android:inputType="number"
         app:bootstrapSize="xl"
-        app:bootstrapBrand="danger"
+        app:bootstrapBrand="info"
         android:hint="Quantidade de Respostas Corretas"
         app:roundedCorners="true" />
 
     <com.beardedhen.androidbootstrap.BootstrapButton
-        android:id="@+id/btnAddRevisao"
+        android:id="@+id/btnAddQuestoes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Agendar Revisões"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        app:bootstrapBrand="danger"
+        app:bootstrapBrand="info"
         app:bootstrapSize="lg"
         app:buttonMode="regular"
         app:showOutline="true"
