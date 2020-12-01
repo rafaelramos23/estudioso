@@ -30,7 +30,7 @@
         android:textSize="18sp"
         app:fontFamily="sans-serif-smallcaps" />
 
-    <com.beardedhen.androidbootstrap.BootstrapDropDown
+    <!--<com.beardedhen.androidbootstrap.BootstrapDropDown
         android:id="@+id/spnMateriaCiclo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,9 +42,35 @@
         app:roundedCorners="true"
         app:bootstrapSize="lg"
         app:dropdownResource="@array/listaMateria"
-        app:bootstrapExpandDirection="down"/>
+        app:bootstrapExpandDirection="down"/>-->
 
-    <com.beardedhen.androidbootstrap.BootstrapEditText
+        <TextView
+            android:id="@+id/txtMateriaCiclo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="left"
+            android:fontFamily="sans-serif-black"
+            android:text="Selecione a Matéria" />
+
+        <Spinner
+            android:id="@+id/spnMateriaCiclo"
+            style="@android:style/Widget.Holo.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/bootstrap_brand_info"
+            android:dropDownSelector="@color/bootstrap_brand_info"
+            android:entries="@array/listaMateria"
+            android:gravity="center"
+            android:hint="Selecione a Matéria"
+            android:popupBackground="@color/cardview_light_background" />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
         android:id="@+id/edtHoraInicialCiclo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

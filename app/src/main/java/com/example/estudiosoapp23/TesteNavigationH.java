@@ -16,27 +16,71 @@ class TesteNavigationH extends AppCompatActivity {
     public DrawerLayout d1;
     public ActionBarDrawerToggle t;
     private NavigationView nv;
-    String tela="";
+    String tela;
 
 
     public void navigationDrawer() {
 
-
-
-
-            d1 = (DrawerLayout) findViewById(R.id.activity_ciclo);
-
+       d1 = (DrawerLayout) findViewById(R.id.activity_ciclo);
         t = new ActionBarDrawerToggle(this, d1, R.string.Open, R.string.Close);
-
         d1.addDrawerListener(t);
-
         t.syncState();
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
         setNv((NavigationView) findViewById(R.id.nav_view));
+        menuPrincipal();
+    }
 
+    public void navigationDrawerQuestoes() {
+        d1 = (DrawerLayout) findViewById(R.id.activity_questoes);
+        t = new ActionBarDrawerToggle(this, d1, R.string.Open, R.string.Close);
+        d1.addDrawerListener(t);
+        t.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setNv((NavigationView) findViewById(R.id.nav_viewCadQuestoes));
+        menuPrincipal();
+    }
+
+    public void navigationDrawerRevisoes() {
+        d1 = (DrawerLayout) findViewById(R.id.activity_revisoes);
+        t = new ActionBarDrawerToggle(this, d1, R.string.Open, R.string.Close);
+        d1.addDrawerListener(t);
+        t.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setNv((NavigationView) findViewById(R.id.nav_viewCadRevisoes));
+        menuPrincipal();
+    }
+
+    public void navigationDrawerCadCronograma() {
+        d1 = (DrawerLayout) findViewById(R.id.activity_cronograma);
+        t = new ActionBarDrawerToggle(this, d1, R.string.Open, R.string.Close);
+        d1.addDrawerListener(t);
+        t.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setNv((NavigationView) findViewById(R.id.nav_viewCadCronograma));
+        menuPrincipal();
+    }
+
+    public void navigationDrawerCadSessao() {
+        d1 = (DrawerLayout) findViewById(R.id.activity_nova_sessao);
+        t = new ActionBarDrawerToggle(this, d1, R.string.Open, R.string.Close);
+        d1.addDrawerListener(t);
+        t.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setNv((NavigationView) findViewById(R.id.nav_viewNovaSessao));
+        menuPrincipal();
+    }
+
+    public void navigationDrawerCadMateria() {
+        d1 = (DrawerLayout) findViewById(R.id.activity_materia);
+        t = new ActionBarDrawerToggle(this, d1, R.string.Open, R.string.Close);
+        d1.addDrawerListener(t);
+        t.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setNv((NavigationView) findViewById(R.id.nav_viewCadMateria));
+        menuPrincipal();
+    }
+
+    public void menuPrincipal(){
         getNv().setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -77,7 +121,6 @@ class TesteNavigationH extends AppCompatActivity {
             }
         });
     }
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (t.onOptionsItemSelected(item))
@@ -95,14 +138,18 @@ class TesteNavigationH extends AppCompatActivity {
         this.nv = nv;
     }
 
+
     private void abreTelaRevisao(){
         Intent intent = new Intent(this, RevisoesActivity.class);
         startActivity(intent);
+        finish();
     }
 
     private void abreTelaQuestoes(){
         Intent intent = new Intent(this, QuestoesActivity.class);
+        //intent.putExtra("tela","CadQuestoes");
         startActivity(intent);
+        finish();
     }
 
 
@@ -113,7 +160,7 @@ class TesteNavigationH extends AppCompatActivity {
 
     private void abreTelaCiclo(){
         Intent intent = new Intent(this, ConsCicloActivity.class);
-       // intent.putExtra("tela", "ConsCiclo");
+        intent.putExtra("tela", "ConsCiclo");
         startActivity(intent);
     }
 

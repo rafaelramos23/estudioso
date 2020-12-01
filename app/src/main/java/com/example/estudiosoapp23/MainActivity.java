@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void abreTelaCiclo(){
         Intent intent = new Intent(this, CicloActivity.class);
-        //intent.putExtra("varTeste", teste);
+        //intent.putExtra("tela", "CadCiclo");
         startActivity(intent);
     }
 

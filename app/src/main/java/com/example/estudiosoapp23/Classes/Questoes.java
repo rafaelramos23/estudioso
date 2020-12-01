@@ -5,16 +5,26 @@ public class Questoes {
     public String materia;
     public int resolvidas;
     public int corretas;
+    public String data;
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
 
     public Questoes(){
 
     }
 
-    public Questoes(String materia, int resolvidas, int corretas, int aproveitamento) {
+    public Questoes(String materia, int resolvidas, int corretas, int aproveitamento, String data) {
         this.materia = materia;
         this.resolvidas = resolvidas;
         this.corretas = corretas;
         this.aproveitamento = aproveitamento;
+        this.data = data;
     }
 
     public String getMateria() {

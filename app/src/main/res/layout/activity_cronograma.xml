@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/activity_cronograma"
+    tools:openDrawer="start"
+    tools:context=".CronogramaActivity">
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".CronogramaActivity">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/txtCadCronograma"
@@ -18,9 +29,9 @@
         android:text="Cronograma de Estudo"
         android:textColor="#39393C"
         android:textSize="18sp"
-        app:fontFamily="sans-serif-smallcaps" />
+        app:fontFamily="sans-serif-black" />
 
-    <com.beardedhen.androidbootstrap.BootstrapDropDown
+    <!--<com.beardedhen.androidbootstrap.BootstrapDropDown
         android:id="@+id/spnDiaSemana"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,9 +43,34 @@
         app:roundedCorners="true"
         app:bootstrapSize="lg"
         app:dropdownResource="@array/listaSemana"
-        app:bootstrapExpandDirection="down"/>
+        app:bootstrapExpandDirection="down"/>-->
 
-    <com.beardedhen.androidbootstrap.BootstrapDropDown
+    <TextView
+        android:id="@+id/txtDiaSemana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="left"
+        android:fontFamily="sans-serif-black"
+        android:text="Selecione o dia da Semana" />
+
+    <Spinner
+        android:id="@+id/spnDiaSemana"
+        style="@android:style/Widget.Holo.Spinner"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/bootstrap_brand_success"
+        android:dropDownSelector="@color/bootstrap_brand_success"
+        android:entries="@array/listaSemana"
+        android:gravity="center"
+        android:popupBackground="@color/cardview_light_background" />
+
+    <!--<com.beardedhen.androidbootstrap.BootstrapDropDown
         android:id="@+id/spnMateriaCro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,7 +82,33 @@
         app:roundedCorners="true"
         app:bootstrapSize="lg"
         app:dropdownResource="@array/listaMateria"
-        app:bootstrapExpandDirection="down"/>
+        app:bootstrapExpandDirection="down"/>-->
+
+    <TextView
+        android:id="@+id/txtMateriaCiclo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="left"
+        android:fontFamily="sans-serif-black"
+        android:text="Selecione a Matéria" />
+
+    <Spinner
+        android:id="@+id/spnMateriaCro"
+        style="@android:style/Widget.Holo.Spinner"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/bootstrap_brand_success"
+        android:dropDownSelector="@color/bootstrap_brand_success"
+        android:entries="@array/listaMateria"
+        android:gravity="center"
+        android:hint="Selecione a Matéria"
+        android:popupBackground="@color/cardview_light_background" />
 
     <com.beardedhen.androidbootstrap.BootstrapEditText
         android:id="@+id/edtHoraInicialCro"
@@ -110,3 +172,21 @@
         android:layout_height="match_parent" />
 
 </LinearLayout>
+
+    <include
+        layout="@layout/nav_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </include>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="false"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/menuaction"
+        android:id="@+id/nav_viewCadCronograma"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>

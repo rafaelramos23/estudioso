@@ -1,10 +1,8 @@
 package com.example.estudiosoapp23.Classes;
 
-import java.util.Date;
-
 public class Revisoes {
     public String materia;
-    public Date data;
+    public String data;
     public String descricao;
     public boolean realizada;
 
@@ -12,7 +10,7 @@ public class Revisoes {
 
     }
 
-    public Revisoes(String materia, Date data, String descricao, boolean realizada) {
+    public Revisoes(String materia, String data, String descricao, boolean realizada) {
         this.materia = materia;
         this.data = data;
         this.descricao = descricao;
@@ -27,11 +25,11 @@ public class Revisoes {
         this.materia = materia;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 

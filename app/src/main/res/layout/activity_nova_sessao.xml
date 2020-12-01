@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/activity_nova_sessao"
+    tools:openDrawer="start"
+    tools:context=".NovaSessaoActivity">
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".NovaSessaoActivity">
+    android:orientation="vertical">
 
 
     <TextView
@@ -66,7 +76,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <com.beardedhen.androidbootstrap.BootstrapDropDown
+    <!--<com.beardedhen.androidbootstrap.BootstrapDropDown
         android:id="@+id/spnMateriaSessao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -78,10 +88,34 @@
         app:roundedCorners="true"
         app:bootstrapSize="lg"
         app:dropdownResource="@array/listaMateria"
-        app:bootstrapExpandDirection="down"/>
+        app:bootstrapExpandDirection="down"/>-->
 
+        <TextView
+            android:id="@+id/txtMateriaSessao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="left"
+            android:fontFamily="sans-serif-black"
+            android:text="Selecione a Matéria" />
 
-    <com.beardedhen.androidbootstrap.BootstrapDropDown
+        <Spinner
+            android:id="@+id/spnMateriaSessao"
+            style="@android:style/Widget.Holo.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/bootstrap_brand_primary"
+            android:dropDownSelector="@color/bootstrap_brand_primary"
+            android:entries="@array/listaMateria"
+            android:gravity="center"
+            android:popupBackground="@color/cardview_light_background" />
+
+    <!--<com.beardedhen.androidbootstrap.BootstrapDropDown
         android:id="@+id/spnTemaSessao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -93,10 +127,34 @@
         app:roundedCorners="true"
         app:bootstrapSize="lg"
         app:dropdownResource="@array/listaTema"
-        app:bootstrapExpandDirection="down"/>
+        app:bootstrapExpandDirection="down"/>-->
 
+        <TextView
+            android:id="@+id/txtTemaSessao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="left"
+            android:fontFamily="sans-serif-black"
+            android:text="Selecione o tema" />
 
-    <com.beardedhen.androidbootstrap.BootstrapDropDown
+        <Spinner
+            android:id="@+id/spnTemaSessao"
+            style="@android:style/Widget.Holo.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/bootstrap_brand_primary"
+            android:dropDownSelector="@color/bootstrap_brand_primary"
+            android:entries="@array/listaTema"
+            android:gravity="center"
+            android:popupBackground="@color/cardview_light_background" />
+
+    <!--<com.beardedhen.androidbootstrap.BootstrapDropDown
         android:id="@+id/spnTopicoSessao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -108,9 +166,35 @@
         app:roundedCorners="true"
         app:bootstrapSize="lg"
         app:dropdownResource="@array/listaTopico"
-        app:bootstrapExpandDirection="down"/>
+        app:bootstrapExpandDirection="down"/>-->
 
-    <com.beardedhen.androidbootstrap.BootstrapEditText
+        <TextView
+            android:id="@+id/txtTopicoSessao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="left"
+            android:fontFamily="sans-serif-black"
+            android:text="Selecione o tópico" />
+
+        <Spinner
+            android:id="@+id/spnTopicoSessao"
+            style="@android:style/Widget.Holo.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/bootstrap_brand_primary"
+            android:dropDownSelector="@color/bootstrap_brand_primary"
+            android:entries="@array/listaTopico"
+            android:gravity="center"
+            android:popupBackground="@color/cardview_light_background" />
+
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
         android:id="@+id/edtDataSessao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -230,3 +314,21 @@
     </ScrollView>
 
 </LinearLayout>
+
+    <include
+        layout="@layout/nav_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </include>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="false"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/menuaction"
+        android:id="@+id/nav_viewNovaSessao"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>

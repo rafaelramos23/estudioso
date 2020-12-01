@@ -4,15 +4,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.beardedhen.androidbootstrap.BootstrapButton;
 import com.beardedhen.androidbootstrap.BootstrapEditText;
 import com.example.estudiosoapp23.Classes.Materia;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MateriaActivity extends AppCompatActivity {
+public class MateriaActivity extends TesteNavigationH {
 
     private DatabaseReference myRef;
     private FirebaseDatabase database;
@@ -24,6 +22,7 @@ public class MateriaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_materia);
+        navigationDrawerCadMateria();
         widgetsMateria();
         eventoBotoesMateria();
     }
