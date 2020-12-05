@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_estudioso_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MateriaActivity"></activity>
+        <activity android:name=".TesteRecyclerActivity"></activity>
+        <activity android:name=".MateriaActivity" />
         <activity android:name=".ConsRevisoesActivity" />
         <activity android:name=".ConsQuestoesActivity" />
         <activity android:name=".ConsCronogramaActivity" />

@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Chronometer;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
@@ -12,11 +13,19 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+
 import com.beardedhen.androidbootstrap.BootstrapButton;
 import com.beardedhen.androidbootstrap.BootstrapEditText;
 import com.example.estudiosoapp23.Classes.Sessao;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NovaSessaoActivity extends TesteNavigationH {
 
@@ -33,6 +42,11 @@ public class NovaSessaoActivity extends TesteNavigationH {
     String tipoSessao;
     Boolean correr=false, RegQuestoes=false, AgeRevisao=false;
     long deter;
+   List<String> materias;
+   ArrayAdapter<String> arrayAdapter;
+   // materias = new ArrayList<>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,6 +147,8 @@ public class NovaSessaoActivity extends TesteNavigationH {
         myRef = database.getReference();
         sessao = new Sessao();
 
+        materias = new ArrayList<>();
+
         btIniciar = (BootstrapButton)findViewById(R.id.btnIniciarCro);
         btParar = (BootstrapButton)findViewById(R.id.btnPararCro);
         btSalvarSessao = (BootstrapButton)findViewById(R.id.btnSalvarSessao);
@@ -155,6 +171,8 @@ public class NovaSessaoActivity extends TesteNavigationH {
 
         btParar.setVisibility(View.INVISIBLE);
         btIniciar.setVisibility(View.INVISIBLE);
+
+        //populaSpinnerMateria();
     }
 
     private void startCronometro(){
@@ -185,6 +203,51 @@ public class NovaSessaoActivity extends TesteNavigationH {
         myRef.child("Sessao_Estudo").child(key).setValue(sessao);
 
         Toast.makeText(this, "Sessão Cadastrada!",Toast.LENGTH_LONG).show();
+    }
+/*
+    private void populaSpinnerMateria(){
+        myRef.child("Materia").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for (DataSnapshot chilSnapeshot:snapshot.getChildren()){
+                    String spinnerMateria = chilSnapeshot.child("nomeMateria").getValue(String.class);
+                    materias.add(spinnerMateria);
+                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(NovaSessaoActivity.this,
+                        android.R.layout.simple_spinner_item, materias);
+                arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+                spnSessaoMateria.setAdapter(arrayAdapter);
+            }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+
+    }
+    } */
+
+    private void populaSpinnerMateria(){
+        myRef.child("Materia");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot chilSnapeshot:snapshot.getChildren()) {
+                    String spinnerMateria = chilSnapeshot.child("nomeMateria").getValue(String.class);
+                    materias.add(spinnerMateria);
+                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(NovaSessaoActivity.this,
+                            android.R.layout.simple_spinner_item, materias);
+                    arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+                    spnSessaoMateria.setAdapter(arrayAdapter);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     private void abreTelaRevisao(){

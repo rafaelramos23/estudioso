@@ -2,7 +2,6 @@ package com.example.estudiosoapp23;
 
 import android.content.Intent;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -29,6 +28,18 @@ class TesteNavigationH extends AppCompatActivity {
         setNv((NavigationView) findViewById(R.id.nav_view));
         menuPrincipal();
     }
+
+    public void navigationDrawerConsCiclo() {
+
+        d1 = (DrawerLayout) findViewById(R.id.activity_cons_ciclo);
+        t = new ActionBarDrawerToggle(this, d1, R.string.Open, R.string.Close);
+        d1.addDrawerListener(t);
+        t.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setNv((NavigationView) findViewById(R.id.nav_viewConsCiclo));
+        menuPrincipal();
+        }
+
 
     public void navigationDrawerQuestoes() {
         d1 = (DrawerLayout) findViewById(R.id.activity_questoes);
@@ -60,6 +71,17 @@ class TesteNavigationH extends AppCompatActivity {
         menuPrincipal();
     }
 
+
+    public void navigationDrawerConsCronograma() {
+        d1 = (DrawerLayout) findViewById(R.id.activity_cons_cronograma);
+        t = new ActionBarDrawerToggle(this, d1, R.string.Open, R.string.Close);
+        d1.addDrawerListener(t);
+        t.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setNv((NavigationView) findViewById(R.id.nav_viewConsCronograma));
+        menuPrincipal();
+    }
+
     public void navigationDrawerCadSessao() {
         d1 = (DrawerLayout) findViewById(R.id.activity_nova_sessao);
         t = new ActionBarDrawerToggle(this, d1, R.string.Open, R.string.Close);
@@ -88,7 +110,7 @@ class TesteNavigationH extends AppCompatActivity {
 
                 switch (id) {
                     case R.id.inicio:
-                        Toast.makeText(getApplicationContext(), "Inicio", Toast.LENGTH_SHORT).show();
+                        abreTelaTeste();
                         break;
 
                     case R.id.ciclo:
@@ -96,7 +118,7 @@ class TesteNavigationH extends AppCompatActivity {
                         break;
 
                     case R.id.cronograma:
-                        abreTelaCronograma();
+                        abreTelaCronogramaCons();
                         break;
 
                     case R.id.materia:
@@ -138,7 +160,11 @@ class TesteNavigationH extends AppCompatActivity {
         this.nv = nv;
     }
 
-
+    private void abreTelaTeste(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+       // finish();
+    }
     private void abreTelaRevisao(){
         Intent intent = new Intent(this, RevisoesActivity.class);
         startActivity(intent);
@@ -164,9 +190,10 @@ class TesteNavigationH extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void abreTelaCronograma(){
+    private void abreTelaCronogramaCons(){
         Intent intent = new Intent(this, ConsCronogramaActivity.class);
         startActivity(intent);
+        finish();
     }
 
     private void abreTelaSessao(){
