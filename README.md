@@ -9,7 +9,7 @@ Aplicativo mobile desenvolvido em ambiente Android Studio, utilizando a Linguage
 Parcialmente desenvolvido. <br>
 
 ## Observações 📌
-Posteriormente será reelaborado em <i> Flutter com a Linguagem Dart</i>.
+Posteriormente o aplicativo será reelaborado em <i> Flutter com a Linguagem Dart</i>.
 <br><br>
 
 ## Tela Inicial e Menu 🏠
