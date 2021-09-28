@@ -32,7 +32,7 @@ Posteriormente o aplicativo será reelaborado em <i> Flutter com a Linguagem Dar
 
 ## Matéria :books:
 <div>
-  <img align="center" alt="Materia" height="500" width="300" src="https://github.com/rafaelramos23/estudioso_v0/blob/versao01/src/Adicionar%20Mat%C3%A9ria.jpeg">
+  <img align="center" alt="Materia" height="450" width="250" src="https://github.com/rafaelramos23/estudioso_v0/blob/versao01/src/Adicionar%20Mat%C3%A9ria.jpeg">
 </div>  
 
 ## Sessão de Estudo :man_teacher:
@@ -43,13 +43,13 @@ Posteriormente o aplicativo será reelaborado em <i> Flutter com a Linguagem Dar
 
 ## Revisões :clipboard:
 <div>
-  <img align="center" alt="Revisoes" height="500" width="300" src="https://github.com/rafaelramos23/estudioso_v0/blob/versao01/src/Agendar%20Revis%C3%A3o.jpeg">
+  <img align="center" alt="Revisoes" height="450" width="250" src="https://github.com/rafaelramos23/estudioso_v0/blob/versao01/src/Agendar%20Revis%C3%A3o.jpeg">
 </div>  
 
 ## Questões :pencil2:
 <div>
-  <img align="left" alt="Questoes" height="500" width="300" src="https://github.com/rafaelramos23/estudioso_v0/blob/versao01/src/Quest%C3%B5es.jpeg">
-  <img align="center" alt="Questoes" height="500" width="300" src="https://github.com/rafaelramos23/estudioso_v0/blob/versao01/src/Registrar%20Quest%C3%B5es.jpeg">
+  <img align="left" alt="Questoes" height="450" width="250" src="https://github.com/rafaelramos23/estudioso_v0/blob/versao01/src/Quest%C3%B5es.jpeg">
+  <img align="center" alt="Questoes" height="450" width="250" src="https://github.com/rafaelramos23/estudioso_v0/blob/versao01/src/Registrar%20Quest%C3%B5es.jpeg">
 </div>  
 
 
