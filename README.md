@@ -27,7 +27,7 @@ Posteriormente o aplicativo será reelaborado em <i> Flutter com a Linguagem Dar
 ## Ciclo :currency_exchange:
 <div>
 <img align="left" alt="Ciclo" height="450" width="250" src="https://github.com/rafaelramos23/estudioso_v0/blob/versao01/src/Ciclo%20de%20Estudo.jpeg">
-<img align="certer" alt="EditarCiclo" height="450" width="250" src="https://github.com/rafaelramos23/estudioso_v0/blob/versao01/src/Editar%20Ciclo.jpeg">
+<img align="center" alt="EditarCiclo" height="450" width="250" src="https://github.com/rafaelramos23/estudioso_v0/blob/versao01/src/Editar%20Ciclo.jpeg">
 </div><br>
 
 ## Matéria :books:
